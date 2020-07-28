@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TasksFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99ddddff"
+        android:padding="@dimen/margin_large">
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textSize="@dimen/text_regular_2x"/>
+
+    <TextView
+        android:id="@+id/tvTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tasks"
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_toRightOf="@id/tvData"
+        android:layout_marginLeft="@dimen/margin_xxlarge"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:entries="@array/days_selection" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvData"
+        android:layout_marginTop="@dimen/margin_large">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium_2">
+
+        <TextView
+            android:id="@+id/tvInProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Progress"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/textColorDark"/>
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#Design"
+            android:textSize="@dimen/text_regular_2x"
+            android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/tvProjectName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Page"
+                android:textSize="@dimen/text_regular_3x"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_below="@id/tvInProgress"
+                android:layout_marginTop="@dimen/margin_medium"
+                />
+            <TextView
+                android:id="@+id/tvMessageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_below="@id/tvProjectName"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                />
+
+            <TextView
+                android:id="@+id/tvAttachCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_below="@id/tvProjectName"
+                android:layout_toRightOf="@id/tvMessageCount"
+                android:layout_alignBaseline="@id/tvMessageCount"
+                android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                />
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N 163"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_below="@id/tvProjectName"
+                android:layout_alignBaseline="@id/tvMessageCount"
+                android:layout_toLeftOf="@id/ivCount"
+                />
+
+            <com.example.customview.views.components.CircleImageView
+                android:id="@+id/ivCount"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pic_profile3"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tvProjectName"
+                android:layout_alignBottom="@id/tvMessageCount"
+                android:layout_marginLeft="@dimen/margin_medium"
+                app:cornerRadius="20dp"/>
+
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView"
+        android:layout_marginTop="@dimen/margin_large">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium_2">
+
+            <TextView
+                android:id="@+id/tvDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tvCategory1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#Design"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/tvProjectName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculator Page"
+                android:textSize="@dimen/text_regular_3x"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_below="@id/tvDone"
+                android:layout_marginTop="@dimen/margin_medium"
+                />
+            <TextView
+                android:id="@+id/tvMessageCount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_below="@id/tvProjectName1"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                />
+
+            <TextView
+                android:id="@+id/tvAttachCount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_below="@id/tvProjectName1"
+                android:layout_toRightOf="@id/tvMessageCount1"
+                android:layout_alignBaseline="@id/tvMessageCount1"
+                android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                />
+
+            <TextView
+                android:id="@+id/tvCount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N 158"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_below="@id/tvProjectName1"
+                android:layout_alignBaseline="@id/tvMessageCount1"
+                android:layout_toLeftOf="@id/ivCount2"
+                android:layout_marginRight="@dimen/margin_medium"
+                />
+
+            <com.example.customview.views.components.CircleImageView
+                android:id="@+id/ivCount1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pic_profile2"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tvProjectName1"
+                android:layout_alignBottom="@id/tvMessageCount1"
+                android:layout_marginLeft="@dimen/margin_medium"
+                app:cornerRadius="20dp"/>
+            <com.example.customview.views.components.CircleImageView
+                android:id="@+id/ivCount2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pic_profile1"
+                android:layout_toLeftOf="@id/ivCount1"
+                android:layout_alignBottom="@id/tvMessageCount1"
+                android:layout_marginRight="-10dp"
+                app:cornerRadius="20dp"/>
+
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardView1"
+            android:layout_marginTop="@dimen/margin_large">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_medium_2">
+
+                <TextView
+                    android:id="@+id/tvReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Review"
+                    android:textSize="@dimen/text_regular_2x"/>
+
+                <TextView
+                    android:id="@+id/tvCategory2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#Frontend"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/tvProjectName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technical Task"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvReview"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    />
+                <TextView
+                    android:id="@+id/tvMessageCount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvProjectName2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvAttachCount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvProjectName2"
+                    android:layout_toRightOf="@id/tvMessageCount2"
+                    android:layout_alignBaseline="@id/tvMessageCount2"
+                    android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    />
+
+                <TextView
+                    android:id="@+id/tvCount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N 157"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvProjectName2"
+                    android:layout_alignBaseline="@id/tvMessageCount2"
+                    android:layout_toLeftOf="@id/ivCount3"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    />
+
+                <com.example.customview.views.components.CircleImageView
+                    android:id="@+id/ivCount3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pic_profile2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/tvProjectName2"
+                    android:layout_alignBottom="@id/tvMessageCount2"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    app:cornerRadius="20dp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardView2"
+            android:layout_marginTop="@dimen/margin_large">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_medium_2">
+
+                <TextView
+                    android:id="@+id/tvDone2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Done"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/tvCategory3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#Backend"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/tvProjectName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculator Page"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvDone2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    />
+                <TextView
+                    android:id="@+id/tvMessageCount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvProjectName3"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvAttachCount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvProjectName3"
+                    android:layout_toRightOf="@id/tvMessageCount3"
+                    android:layout_alignBaseline="@id/tvMessageCount3"
+                    android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    />
+
+                <TextView
+                    android:id="@+id/tvCount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N 158"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvProjectName3"
+                    android:layout_alignBaseline="@id/tvMessageCount3"
+                    android:layout_toLeftOf="@id/ivCount4"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    />
+
+                <com.example.customview.views.components.CircleImageView
+                    android:id="@+id/ivCount4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pic_profile2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/tvProjectName3"
+                    android:layout_alignBottom="@id/tvMessageCount3"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    app:cornerRadius="20dp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+</ScrollView>

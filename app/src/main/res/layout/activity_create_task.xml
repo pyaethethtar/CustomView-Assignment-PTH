@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateTaskActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dd071e3d"
+        android:padding="@dimen/margin_large">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create A New Task"
+            android:textSize="@dimen/text_regular_3x"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_navigate_before_white_24dp"/>
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="@dimen/text_regular_3x"
+            android:textColor="#00bb99"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/tvClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLIENT"
+            android:textColor="#ABABAB"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="@dimen/margin_xxlarge"/>
+        <com.example.customview.views.components.CircleImageView
+            android:id="@+id/ivClient"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cornerRadius="25dp"
+            android:src="@drawable/pic_team"
+            android:layout_below="@id/tvClient"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/margin_medium"/>
+        <Spinner
+            android:id="@+id/spinnerTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ivClient"
+            android:layout_alignBottom="@id/ivClient"
+            android:entries="@array/teams_selection"
+            android:backgroundTint="#FFFFFF"/>
+        <TextView
+            android:id="@+id/tvProjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROJECT NAME"
+            android:textColor="#ABABAB"
+            android:layout_below="@id/ivClient"
+            android:layout_marginTop="@dimen/margin_large"/>
+        <EditText
+            android:id="@+id/etProjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_regular_2x"
+            android:layout_below="@id/tvProjectName"
+            android:backgroundTint="#FFFFFF"/>
+        <TextView
+            android:id="@+id/tvProjectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROJECT DATE"
+            android:textColor="#ABABAB"
+            android:layout_below="@id/etProjectName"
+            android:layout_marginTop="@dimen/margin_large"/>
+        <DatePicker
+            android:id="@+id/datepicker1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:layout_below="@id/tvProjectDate"/>
+        <DatePicker
+            android:id="@+id/datepicker2"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:layout_toRightOf="@id/datepicker1"
+            android:layout_alignBottom="@id/datepicker1"/>
+
+
+        <TextView
+            android:id="@+id/tvAssignee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ASSIGNEE"
+            android:textColor="#ABABAB"
+            android:layout_below="@id/datepicker1"
+            android:layout_marginTop="@dimen/margin_large"/>
+        <com.example.customview.views.components.CircleImageView
+            android:id="@+id/ivGoToProfile1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/pic_profile2"
+            android:scaleType="fitCenter"
+            android:layout_below="@id/tvAssignee"
+            android:layout_marginTop="@dimen/margin_large"
+            app:cornerRadius="30dp"/>
+        <com.example.customview.views.components.CircleImageView
+            android:id="@+id/ivGoToProfile2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/pic_profile3"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="-10dp"
+            app:cornerRadius="30dp"
+            android:layout_toRightOf="@id/ivGoToProfile1"
+            android:layout_alignBottom="@id/ivGoToProfile1"/>
+        <ImageView
+            android:id="@+id/ivGotoCreateTask"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_add_black_24dp"
+            android:background="@drawable/circle_image_view"
+            android:layout_marginLeft="-10dp"
+            android:padding="@dimen/margin_medium"
+            android:layout_toRightOf="@id/ivGoToProfile2"
+            android:layout_alignBottom="@id/ivGoToProfile2"/>
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATEGORY"
+            android:textColor="#ABABAB"
+            android:layout_below="@id/ivGoToProfile1"
+            android:layout_marginTop="@dimen/margin_large"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCategory"
+            android:layout_marginTop="@dimen/margin_medium">
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Design"
+                android:backgroundTint="#ffffff"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frontend"
+                android:backgroundTint="#ffffff"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Backend"
+                android:backgroundTint="#ffffff"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

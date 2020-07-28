@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="100dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:id="@+id/bottom_sheet_des"
+    android:padding="@dimen/margin_large">
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="@dimen/text_regular_3x"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/ivAttach"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle_image_view"
+        android:src="@drawable/ic_attach_file_green_24dp"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/margin_medium"/>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ABABAB"
+        android:layout_below="@id/tvDescription"
+        android:layout_marginTop="@dimen/margin_large"
+        android:paddingRight="@dimen/margin_medium" />
+    <TextView
+        android:id="@+id/tvAttachments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATTACHMENTS"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="@dimen/margin_xlarge"/>
+    <com.example.customview.views.components.CircleImageView
+        android:id="@+id/ivAttachment"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cornerRadius="25dp"
+        android:src="@drawable/pic_team"
+        android:layout_below="@id/tvAttachments"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/margin_medium"/>
+    <TextView
+        android:id="@+id/tvReference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reference_1"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_toRightOf="@id/ivAttachment"
+        android:layout_alignTop="@id/ivAttachment"
+        android:layout_marginLeft="@dimen/margin_medium_3"/>
+    <ProgressBar
+        android:id="@+id/progressbarData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="false"
+        android:max="100"
+        android:minWidth="250dp"
+        android:minHeight="5dp"
+        android:progress="80"
+        android:layout_below="@id/tvReference"
+        android:layout_alignLeft="@id/tvReference"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"/>
+
+        <TextView
+            android:id="@+id/tvDataCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="168 KB"
+            android:textColor="#929292"
+            android:layout_above="@id/progressbarData"
+            android:layout_alignRight="@id/progressbarData"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_cancel_black_24dp"
+        android:layout_toRightOf="@id/progressbarData"
+        android:layout_alignBottom="@id/progressbarData"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Task"
+        android:background="@drawable/rounded_button"
+        android:layout_below="@id/progressbarData"
+        android:layout_marginTop="@dimen/margin_large"/>
+
+
+
+
+
+
+</RelativeLayout>
